@@ -17,6 +17,7 @@ public class EnemyDeath : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        transform.gameObject.tag = "Untagged";
+        Destroy(gameObject,0.1f);
     }
 }

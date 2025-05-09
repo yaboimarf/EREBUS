@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class TowerBehaviour : MonoBehaviour
     public Transform target;
     public Transform gun;
     public float targetRadius;
+    public List<int> enemies = new List<int>();
+    public RaycastHit range;
+    public float rangeMax;
     // Use this for initialization
     void Start()
     {
@@ -37,18 +41,10 @@ public class TowerBehaviour : MonoBehaviour
         //{
         //    target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
         //}
-        if (target == null)
-        {
-            //if (target.gameObject != null)
-            //{
-            //    target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
-            //}
-            target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
 
-            //if (GameObject.FindWithTag("Player") != null)
-            //{
-            //    target = GameObject.FindWithTag("Player").GetComponent<Transform>();
-            //}
+        if (target != GameObject.FindWithTag("Enemy").GetComponent<Transform>())
+        {
+            target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();                                         
         }
     }
 }
