@@ -9,9 +9,6 @@ public class TowerBehaviour : MonoBehaviour
     public Transform target;
     public Transform gun;
     public float targetRadius;
-    public List<int> enemies = new List<int>();
-    public RaycastHit range;
-    public float rangeMax;
     // Use this for initialization
     void Start()
     {
@@ -35,16 +32,21 @@ public class TowerBehaviour : MonoBehaviour
     }
     private void TargetingAI()
     {
-        //Vector3 startPos = transform.position;
-        //Collider[] colliders = Physics.OverlapSphere(startPos, targetRadius);
-        //if (colliders != null)
-        //{
-        //    target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
-        //}
-
         if (target != GameObject.FindWithTag("Enemy").GetComponent<Transform>())
         {
-            target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();                                         
+            target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();            
+        }
+
+        if (target == GameObject.FindWithTag("Enemy").GetComponent<Transform>())
+        {
+            if (Vector3.Distance(transform.position, target.position) < targetRadius)
+            {
+                print("target in range");
+            }
+            else
+            {
+                target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+            }
         }
     }
 }

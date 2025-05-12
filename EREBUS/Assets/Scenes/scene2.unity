@@ -574,9 +574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   gun: {fileID: 1701849200}
-  targetRadius: 5
-  enemies: 
-  rangeMax: 0
+  targetRadius: 20
 --- !u!54 &194702848
 Rigidbody:
   m_ObjectHideFlags: 0
