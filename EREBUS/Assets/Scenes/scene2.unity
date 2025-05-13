@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &14718816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -234,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 14718814}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.121, y: 1.01, z: -1.72}
+  m_LocalPosition: {x: 22.46, y: 1.01, z: -1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -465,10 +466,11 @@ GameObject:
   - component: {fileID: 194702845}
   - component: {fileID: 194702844}
   - component: {fileID: 194702847}
+  - component: {fileID: 194702849}
   - component: {fileID: 194702848}
   m_Layer: 0
   m_Name: Servo
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,7 +510,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &194702845
 MeshRenderer:
@@ -575,7 +577,31 @@ MonoBehaviour:
   target: {fileID: 0}
   gun: {fileID: 1701849200}
   targetRadius: 20
---- !u!54 &194702848
+  enemylist: []
+--- !u!136 &194702848
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194702842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &194702849
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -792,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &506279977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -978,7 +1005,7 @@ Transform:
   m_GameObject: {fileID: 517973325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.16, y: 1.01, z: -1.72}
+  m_LocalPosition: {x: -7.16, y: 1.01, z: -13.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,6 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!1 &1092853914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &1092853916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1108,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 1092853914}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.22, y: 2.97, z: -4.9}
+  m_LocalPosition: {x: 18.45, y: 2.97, z: -4.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1386,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &1553713961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1466,7 +1496,7 @@ Transform:
   m_GameObject: {fileID: 1553713959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.16, y: 1.01, z: -1.72}
+  m_LocalPosition: {x: -22.03, y: 1.01, z: -1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1746,6 +1776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &2012969831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1864,6 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d6575cd4c51c40b864cc8c6bcb4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerBehaviour: {fileID: 0}
 --- !u!65 &2026386115
 BoxCollider:
   m_ObjectHideFlags: 0

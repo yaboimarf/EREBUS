@@ -10,7 +10,7 @@ public class TowerBehaviour : MonoBehaviour
     public Transform target;
     public Transform gun;
     public float targetRadius;
-    public Array[] enemylist;
+    public List<Transform> enemylist = new List<Transform>();
     // Use this for initialization
     void Start()
     {
