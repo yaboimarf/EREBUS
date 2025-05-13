@@ -34,9 +34,9 @@ public class TowerBehaviour : MonoBehaviour
     }
     private void TargetingAI()
     {
-        if (target != GameObject.FindWithTag("Enemy").GetComponent<Transform>())
+        if (target == null)
         {
-            target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();            
+            target = enemylist[0];            
         }
 
         if (target != null)
@@ -47,9 +47,23 @@ public class TowerBehaviour : MonoBehaviour
             }
             else
             {
-                target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
-                print("out of range");
+                //target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+                target = enemylist[0];
             }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy") == true)
+        {
+            enemylist.Add(GameObject.FindWithTag("Enemy").GetComponent<Transform>());
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy") == true)
+        {
+            enemylist.Remove(GameObject.FindWithTag("Enemy").GetComponent<Transform>());
         }
     }
 }
