@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -9,6 +10,7 @@ public class TowerBehaviour : MonoBehaviour
     public Transform target;
     public Transform gun;
     public float targetRadius;
+    public Array[] enemylist;
     // Use this for initialization
     void Start()
     {
@@ -37,15 +39,16 @@ public class TowerBehaviour : MonoBehaviour
             target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();            
         }
 
-        if (target == GameObject.FindWithTag("Enemy").GetComponent<Transform>())
+        if (target != null)
         {
-            if (Vector3.Distance(transform.position, target.position) < targetRadius)
+            if (Vector3.Distance(transform.position, target.position) <= targetRadius)
             {
                 print("target in range");
             }
             else
             {
                 target = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+                print("out of range");
             }
         }
     }
