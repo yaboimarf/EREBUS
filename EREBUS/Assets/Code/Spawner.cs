@@ -9,11 +9,7 @@ public class Spawner : MonoBehaviour
     public float enemySpawnDelay;
     public int maxCount;
     private int count = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        InvokeRepeating("Spawn", 1, enemySpawnDelay);
-    }
+    
 
     private void Spawn()
     {
@@ -25,5 +21,14 @@ public class Spawner : MonoBehaviour
         {
             CancelInvoke();
         }
+    }
+    public void StartNextWave()
+    {
+        count = 0;
+        InvokeRepeating("Spawn", 1, enemySpawnDelay);
+    }
+    public void StopSpawning()
+    {
+        CancelInvoke();
     }
 }

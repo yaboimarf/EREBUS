@@ -5,6 +5,7 @@ using Unity.AI;
 using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
+    public LevelManager levelManager;
     private List<Transform> wayPoint;
     private NavMeshAgent agent;
     private int currentWayPointIndex = 0;
@@ -25,8 +26,9 @@ public class EnemyController : MonoBehaviour
         }
         if(!agent.pathPending && agent.remainingDistance <= agentStoppingDistance)
         {
-            if(currentWayPointIndex == wayPoint.Count - 1)
+            if(currentWayPointIndex == wayPoint.Count)
             {
+                levelManager.EnemyDestroyed();
                 Destroy(this.gameObject, 0.1f);
             }
             else
