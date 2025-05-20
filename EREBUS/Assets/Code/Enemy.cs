@@ -11,9 +11,14 @@ public class Enemy : MonoBehaviour
     private WaveSpawner waveSpawner;
     public GameObject endPoint;
     NavMeshAgent agent;
+    public int fundsOnDeath;
+    public ScoreBoard scoreBoard;
+    public int health;
+    public int damageToPlayer;
     // Start is called before the first frame update
     void Start()
     {
+        scoreBoard = GameObject.FindWithTag("CoinCounter").GetComponent<ScoreBoard>();
         endPoint = GameObject.FindWithTag("EndPoint");
         waveSpawner = GetComponentInParent<WaveSpawner>();
         agent = GetComponent<NavMeshAgent>();
@@ -25,12 +30,27 @@ public class Enemy : MonoBehaviour
     {
         if(agent.remainingDistance < 0.3f)
         {
-            EnemyDeath();
+            EnemyReachedEnd();
+        }
+        if(health <= 0)
+        {
+            EnemyKillled();
         }
     }
-    public void EnemyDeath()
+    public void EnemyKillled()
     {
+        scoreBoard.AddFunds(fundsOnDeath);
         Destroy(this.gameObject);
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+    }
+    public void EnemyReachedEnd()
+    {
+        scoreBoard.RemoveHealth(damageToPlayer);
+        Destroy(this.gameObject);
+        waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+    }
+    public void TakeDamage(int damageTaken)
+    {
+        health -= damageTaken;        
     }
 }

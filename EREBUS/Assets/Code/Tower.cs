@@ -12,6 +12,11 @@ public class Tower : MonoBehaviour
     public float angleTurningAccuracy;
     public List<GameObject> enemiesInRange = new List<GameObject>();
     public GameObject currentTarget;
+
+    public GameObject bulletPrefab;
+    public Transform bulletSpawnPoint;
+    public float reloadTime;
+    public float timer;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -29,7 +34,6 @@ public class Tower : MonoBehaviour
             UpdateTarget();
         }
     }
-
     private void UpdateTarget()
     {
         if(currentTarget != null)
@@ -63,6 +67,10 @@ public class Tower : MonoBehaviour
     }
     private void Update()
     {
+        if(timer >= 0)
+        {
+            timer -= Time.deltaTime;
+        }
         if(currentTarget != null)
         {
             Vector3 aimAt = new Vector3(currentTarget.transform.position.x, core.transform.position.y, currentTarget.transform.position.z);
@@ -79,13 +87,17 @@ public class Tower : MonoBehaviour
 
             if(Vector3.Angle(directionToTarget, gun.transform.forward) < angleTurningAccuracy)
             {
-                Fire();
+                if(timer <= 0)
+                {
+                    Fire();
+                    timer = reloadTime;
+                }
             }
         }
     }
 
     private void Fire()
-    {
-        Debug.Log("pew");
+    {        
+        Instantiate(bulletPrefab, bulletSpawnPoint.position , bulletSpawnPoint.rotation);        
     }
 }

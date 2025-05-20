@@ -254,7 +254,6 @@ GameObject:
   - component: {fileID: 8798155855912552191}
   - component: {fileID: 7089623005959248033}
   - component: {fileID: 985078251855317767}
-  - component: {fileID: 2094874693528964340}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -363,10 +362,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 1468964230112996178}
   gun: {fileID: 114970720305669450}
-  turningSpeed: 30
+  turningSpeed: 10
   angleTurningAccuracy: 3
   enemiesInRange: []
   currentTarget: {fileID: 0}
+  bulletPrefab: {fileID: 4002078842694657079, guid: 585876c648adf544cbb4eefd9be8cfff,
+    type: 3}
+  bulletSpawnPoint: {fileID: 3152750830391212280}
+  reloadTime: 0.2
+  timer: 0
 --- !u!135 &985078251855317767
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -388,18 +392,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2094874693528964340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2483319691665565650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 199606ddfb35a054c8585d526790b401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3973094238779213861
 GameObject:
   m_ObjectHideFlags: 0

@@ -123,6 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
+  fundsOnDeath: 500
+  scoreBoard: {fileID: 0}
+  health: 100
+  damageToPlayer: 10
 --- !u!54 &2163174253604058626
 Rigidbody:
   m_ObjectHideFlags: 0
