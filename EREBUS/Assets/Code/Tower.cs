@@ -47,6 +47,7 @@ public class Tower : MonoBehaviour
         {
             if(enemy == null)
             {
+                //enemiesInRange.Remove(enemy);
                 return;
             }
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
@@ -67,6 +68,13 @@ public class Tower : MonoBehaviour
     }
     private void Update()
     {
+        foreach(GameObject deadEnemy in enemiesInRange)
+        {
+            if(deadEnemy == null)
+            {
+                enemiesInRange.Remove(deadEnemy);
+            }
+        }
         if(timer >= 0)
         {
             timer -= Time.deltaTime;
