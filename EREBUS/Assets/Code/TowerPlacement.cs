@@ -6,7 +6,8 @@ public class TowerPlacement : MonoBehaviour
 {
     private GameObject focusObs;
     [SerializeField] private Camera playerCamera;
-
+    public ScoreBoard scoreboard;
+    public int towerCost;
     
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class TowerPlacement : MonoBehaviour
                     hit.collider.gameObject.tag = "Occupied";
                     focusObs.transform.position = new Vector3(hit.collider.gameObject.transform.position.x, focusObs.transform.position.y, hit.collider.gameObject.transform.position.z);
                     focusObs.gameObject.GetComponent<SphereCollider>().enabled = true;
+                    scoreboard.AddFunds(-towerCost);
                 }
                 else
                 {
@@ -44,6 +46,9 @@ public class TowerPlacement : MonoBehaviour
     }
     public void SetTowerToPlace(GameObject tower)
     {
-        focusObs = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        if(scoreboard.availableFunds >= towerCost)
+        {
+            focusObs = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        }
     }
 }
