@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
         type: 3}
       propertyPath: m_Name
-      value: turret base1
+      value: railgun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80,7 +80,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 774446839003739394}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4183105447873731922}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 667685509958826251}
   m_SourcePrefab: {fileID: 100100000, guid: 4ee42590bf4fcf34f812f423433cf76f, type: 3}
 --- !u!4 &4009005722020436418 stripped
 Transform:
@@ -88,6 +96,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3470129116826844713}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4389050144582599544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3470129116826844713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &4183105447873731922
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389050144582599544}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 30
+  m_Center: {x: -0.009414315, y: 1.031405, z: -0.40171397}
+--- !u!114 &667685509958826251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389050144582599544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92fb8fe73cec2e44dbbf23af90799544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  core: {fileID: 140935265602351032}
+  gun: {fileID: 7061699848967580859}
+  turningSpeed: 20
+  angleTurningAccuracy: 0.5
+  enemiesInRange: []
+  currentTarget: {fileID: 0}
+  reloadTime: 2
+  timer: 0
+  range: 30
+  damage: 500
 --- !u!1001 &8191124789641261514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +217,12 @@ PrefabInstance:
       addedObject: {fileID: 7587406717627151873}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addde97444b0f03458147ba19195c300, type: 3}
+--- !u!1 &140935265602351032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095232947201449586, guid: addde97444b0f03458147ba19195c300,
+    type: 3}
+  m_PrefabInstance: {fileID: 8191124789641261514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &774446839003739394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868673799185974472, guid: addde97444b0f03458147ba19195c300,
@@ -234,6 +297,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c29bc8a1f6c31441addeb1e6e07ee42, type: 3}
+--- !u!1 &7061699848967580859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490009567423651942, guid: 7c29bc8a1f6c31441addeb1e6e07ee42,
+    type: 3}
+  m_PrefabInstance: {fileID: 8551668664663543005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7587406717627151873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2298598748953524956, guid: 7c29bc8a1f6c31441addeb1e6e07ee42,

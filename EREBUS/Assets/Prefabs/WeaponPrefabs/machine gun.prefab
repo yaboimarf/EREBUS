@@ -97,7 +97,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
         type: 3}
       propertyPath: m_Name
-      value: turret base1 (1)
+      value: machine gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 3009823837150577149}
   gun: {fileID: 403309704037359449}
-  turningSpeed: 10
+  turningSpeed: 20
   angleTurningAccuracy: 3
   enemiesInRange: []
   currentTarget: {fileID: 0}

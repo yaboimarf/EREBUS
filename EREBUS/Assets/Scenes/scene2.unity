@@ -481,25 +481,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1842096547}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &297264613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 314965827463824410, guid: 6c7a28b9239155a4db76e7ba5046f83f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4850767153933313918}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &297264614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297264613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6009126e1c8a95543952395d160345cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMultiplier: 0.5
 --- !u!1 &300405530
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1760234862}
   scoreboard: {fileID: 1686681840}
-  towerCost: 500
+  towerCost: 50
 --- !u!1 &326850300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,11 +3412,7 @@ PrefabInstance:
     - {fileID: 3445585793452596768, guid: 6c7a28b9239155a4db76e7ba5046f83f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 314965827463824410, guid: 6c7a28b9239155a4db76e7ba5046f83f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 297264614}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7a28b9239155a4db76e7ba5046f83f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
