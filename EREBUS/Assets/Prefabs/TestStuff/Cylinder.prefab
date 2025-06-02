@@ -127,6 +127,8 @@ MonoBehaviour:
   scoreBoard: {fileID: 0}
   health: 100
   damageToPlayer: 10
+  baseSpeed: 5
+  speedMultiplyer: 0
 --- !u!54 &2163174253604058626
 Rigidbody:
   m_ObjectHideFlags: 0

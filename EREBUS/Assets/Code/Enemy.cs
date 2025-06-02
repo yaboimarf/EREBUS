@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public ScoreBoard scoreBoard;
     public int health;
     public int damageToPlayer;
+    public float baseSpeed;
+    public float speedMultiplyer;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class Enemy : MonoBehaviour
         waveSpawner = GetComponentInParent<WaveSpawner>();
         agent = GetComponent<NavMeshAgent>();
         agent.destination = endPoint.transform.position;
+        speedMultiplyer = 1f;
+        agent.speed = baseSpeed * speedMultiplyer;
     }
 
     // Update is called once per frame
@@ -52,5 +56,19 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damageTaken)
     {
         health -= damageTaken;        
+    }
+    public void SpeedMultiplyerDecrease(float reduction)
+    {
+        speedMultiplyer -= reduction;
+        SpeedUpdate();
+    }
+    public void SpeedMultiplyerIncrease(float increase)
+    {
+        speedMultiplyer += increase;
+        SpeedUpdate();
+    }
+    public void SpeedUpdate()
+    {
+        agent.speed = baseSpeed * speedMultiplyer;
     }
 }
