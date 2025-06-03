@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: railgun
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -138,12 +143,12 @@ MonoBehaviour:
   core: {fileID: 140935265602351032}
   gun: {fileID: 7061699848967580859}
   turningSpeed: 20
-  angleTurningAccuracy: 0.5
+  angleTurningAccuracy: 0.1
   enemiesInRange: []
   currentTarget: {fileID: 0}
   reloadTime: 2
   timer: 0
-  range: 30
+  range: 100
   damage: 500
 --- !u!1001 &8191124789641261514
 PrefabInstance:
@@ -157,6 +162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: turret gun holder4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095232947201449586, guid: addde97444b0f03458147ba19195c300,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8868673799185974472, guid: addde97444b0f03458147ba19195c300,
         type: 3}
@@ -241,6 +251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: railgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490009567423651942, guid: 7c29bc8a1f6c31441addeb1e6e07ee42,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2298598748953524956, guid: 7c29bc8a1f6c31441addeb1e6e07ee42,
         type: 3}

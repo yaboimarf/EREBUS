@@ -6,13 +6,11 @@ public class Projectile : MonoBehaviour
 {
     public float projectileSpeed;
     public Vector3 direction = Vector3.forward;
-    public Enemy enemy;
     public int damageToDo;
     public float lifeTime;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.FindWithTag("Enemy").GetComponent<Enemy>();
         Destroy(gameObject, lifeTime);
     }
 
@@ -26,7 +24,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(damageToDo);
+            collision.collider.GetComponent<Enemy>().TakeDamage(damageToDo);
         }
     }
 }

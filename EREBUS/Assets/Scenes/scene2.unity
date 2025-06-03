@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1760234862}
   scoreboard: {fileID: 1686681840}
-  towerCost: 250
+  towerCost: 10
 --- !u!4 &1162997754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 269026664320459329, guid: 875932122cbe4b64584cc0f720f0f9a3,

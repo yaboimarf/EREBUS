@@ -19,7 +19,11 @@ public class MissileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * projectileSpeed * Time.deltaTime);
+        if(enemy != null)
+        {
+            transform.LookAt(enemy.transform);
+        }        
+        transform.Translate(direction * projectileSpeed * Time.deltaTime);        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,6 +31,7 @@ public class MissileScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             enemy.TakeDamage(damageToDo);
+            Destroy(gameObject);
         }
     }
 }

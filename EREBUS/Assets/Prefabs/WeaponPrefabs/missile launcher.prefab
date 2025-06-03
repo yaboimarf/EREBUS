@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2163374141883709445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7055468117161587128}
+  m_Layer: 2
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7055468117161587128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163374141883709445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8235894671143237470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7703591133378344102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12,6 +43,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: turret gun holder4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095232947201449586, guid: addde97444b0f03458147ba19195c300,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8868673799185974472, guid: addde97444b0f03458147ba19195c300,
         type: 3}
@@ -75,6 +111,12 @@ PrefabInstance:
 --- !u!4 &1295766237104975982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8868673799185974472, guid: addde97444b0f03458147ba19195c300,
+    type: 3}
+  m_PrefabInstance: {fileID: 7703591133378344102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923226344123427540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095232947201449586, guid: addde97444b0f03458147ba19195c300,
     type: 3}
   m_PrefabInstance: {fileID: 7703591133378344102}
   m_PrefabAsset: {fileID: 0}
@@ -149,7 +191,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
         type: 3}
       propertyPath: m_Name
-      value: turret base1 (2)
+      value: missile launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -158,7 +205,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1295766237104975982}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6884956660444628734}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4230456548119662340}
   m_SourcePrefab: {fileID: 100100000, guid: 4ee42590bf4fcf34f812f423433cf76f, type: 3}
 --- !u!4 &8343618325029875267 stripped
 Transform:
@@ -166,6 +221,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8376912823286303144}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8683410696679470329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ee42590bf4fcf34f812f423433cf76f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8376912823286303144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6884956660444628734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683410696679470329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc9dfdad4b81274394d35fb16bd8854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  core: {fileID: 1923226344123427540}
+  gun: {fileID: 8718993333121592804}
+  turningSpeed: 20
+  angleTurningAccuracy: 3
+  enemiesInRange: []
+  currentTarget: {fileID: 0}
+  bulletPrefab: {fileID: 4002078842694657079, guid: 585876c648adf544cbb4eefd9be8cfff,
+    type: 3}
+  bulletSpawnPoint: {fileID: 7055468117161587128}
+  reloadTime: 2
+  timer: 0
+--- !u!135 &4230456548119662340
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683410696679470329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8485203825198305461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,14 +339,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: missile launcher
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c4eb05b8b2e8df4998c2d9a5b85419a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c4eb05b8b2e8df4998c2d9a5b85419a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7055468117161587128}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4eb05b8b2e8df4998c2d9a5b85419a, type: 3}
 --- !u!4 &8235894671143237470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c4eb05b8b2e8df4998c2d9a5b85419a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8485203825198305461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8718993333121592804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c4eb05b8b2e8df4998c2d9a5b85419a,
     type: 3}
   m_PrefabInstance: {fileID: 8485203825198305461}
   m_PrefabAsset: {fileID: 0}

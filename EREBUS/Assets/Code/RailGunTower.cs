@@ -106,13 +106,9 @@ public class RailGunTower : MonoBehaviour
 
     private void Fire()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out RaycastHit target, range))
+        if(Physics.Raycast(gun.transform.position, gun.transform.forward, out RaycastHit target, range))
         {
-            if (target.collider.CompareTag("Enemy"))
-            {
-                target.rigidbody.GetComponent<Enemy>().TakeDamage(damage);
-                Debug.Log("ik heb gevuurt");
-            }
+            target.collider.GetComponent<Enemy>().TakeDamage(damage);            
         }
     }
 }
