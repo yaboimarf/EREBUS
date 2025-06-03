@@ -245,7 +245,7 @@ MonoBehaviour:
   angleTurningAccuracy: 3
   enemiesInRange: []
   currentTarget: {fileID: 0}
-  bulletPrefab: {fileID: 4002078842694657079, guid: 585876c648adf544cbb4eefd9be8cfff,
+  bulletPrefab: {fileID: 1927197435592044914, guid: 830d4e97aaa9be54ea55c70ac2f8aa46,
     type: 3}
   bulletSpawnPoint: {fileID: 7055468117161587128}
   reloadTime: 2
