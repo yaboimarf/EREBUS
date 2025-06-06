@@ -21,10 +21,6 @@ public class ScoreBoard : MonoBehaviour
         funds.text = availableFunds.ToString();
         playerHealth.text = healthRemaining.ToString();
 
-        if(healthRemaining <= 0)
-        {
-            Debug.Log("game over");
-        }
     }
     public void AddFunds(int coins)
     {
