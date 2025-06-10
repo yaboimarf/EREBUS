@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hond robot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1813eed5de73fa042ba6a8cb89841538,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: 1813eed5de73fa042ba6a8cb89841538,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
