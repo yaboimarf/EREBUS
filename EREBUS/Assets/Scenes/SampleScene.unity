@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ed06e65687c3a4fbe1bc8a467d949d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: scene2
+  sceneName: woestijn
 --- !u!4 &1550009748
 Transform:
   m_ObjectHideFlags: 0
