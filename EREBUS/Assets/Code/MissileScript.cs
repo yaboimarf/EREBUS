@@ -10,6 +10,7 @@ public class MissileScript : MonoBehaviour
     public int damageToDo;
     public float lifeTime;
     public float explosionRadius;
+    public ParticleSystem explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class MissileScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            explosion.Play();
             Vector3 explosionPos = transform.position;
             Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
             foreach (Collider hit in colliders)

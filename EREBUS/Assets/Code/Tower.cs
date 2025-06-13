@@ -17,6 +17,7 @@ public class Tower : MonoBehaviour
     public Transform bulletSpawnPoint;
     public float reloadTime;
     public float timer;
+    public ParticleSystem muzzleFlash;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -105,7 +106,8 @@ public class Tower : MonoBehaviour
     }
 
     private void Fire()
-    {        
+    {
+        muzzleFlash.Play();
         Instantiate(bulletPrefab, bulletSpawnPoint.position , bulletSpawnPoint.rotation);        
     }
 }

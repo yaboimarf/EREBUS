@@ -17,6 +17,8 @@ public class RailGunTower : MonoBehaviour
     public RaycastHit railFire;
     public float range;
     public int damage;
+
+    public ParticleSystem muzzleFlash;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -106,6 +108,7 @@ public class RailGunTower : MonoBehaviour
 
     private void Fire()
     {
+        muzzleFlash.Play();
         if(Physics.Raycast(gun.transform.position, gun.transform.forward, out RaycastHit target, range))
         {
             target.collider.GetComponent<Enemy>().TakeDamage(damage);            

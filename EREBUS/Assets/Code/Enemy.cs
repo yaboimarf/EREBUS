@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public int damageToPlayer;
     public float baseSpeed;
     public float speedMultiplyer;
+    public ParticleSystem deathExplosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,8 +50,9 @@ public class Enemy : MonoBehaviour
     }
     public void EnemyReachedEnd()
     {
+        deathExplosion.Play();
         scoreBoard.RemoveHealth(damageToPlayer);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 1f);
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
     }
     public void TakeDamage(int damageTaken)
