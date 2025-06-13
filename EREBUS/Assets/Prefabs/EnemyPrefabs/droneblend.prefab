@@ -1,5 +1,90 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3940025623982302168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4514923524901496154}
+    m_Modifications:
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278509648059014111, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070148288643570155, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d33213a8570d5ac44bb3c58bff2ed6dc, type: 3}
+--- !u!4 &1863127452503782358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3420168245257359374, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3940025623982302168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4922122989624195079 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8278509648059014111, guid: d33213a8570d5ac44bb3c58bff2ed6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3940025623982302168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4116996474824524465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,7 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3b6ead9a06368c419cec85a901a0151,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1863127452503782358}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3b6ead9a06368c419cec85a901a0151,
         type: 3}
@@ -167,6 +256,7 @@ MonoBehaviour:
   damageToPlayer: 10
   baseSpeed: 7
   speedMultiplyer: 1
+  deathExplosion: {fileID: 4922122989624195079}
 --- !u!195 &4584647288100304518
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -189,3 +279,9 @@ NavMeshAgent:
   m_BaseOffset: 5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!4 &4514923524901496154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3b6ead9a06368c419cec85a901a0151,
+    type: 3}
+  m_PrefabInstance: {fileID: 4116996474824524465}
+  m_PrefabAsset: {fileID: 0}

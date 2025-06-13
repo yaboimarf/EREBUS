@@ -44,15 +44,16 @@ public class Enemy : MonoBehaviour
     }
     public void EnemyKillled()
     {
+        deathExplosion.Play();
         scoreBoard.AddFunds(fundsOnDeath);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 1f);
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
     }
     public void EnemyReachedEnd()
     {
         deathExplosion.Play();
         scoreBoard.RemoveHealth(damageToPlayer);
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject);
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
     }
     public void TakeDamage(int damageTaken)
