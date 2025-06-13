@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
     {
         deathExplosion.Play();
         scoreBoard.AddFunds(fundsOnDeath);
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject);
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
     }
     public void EnemyReachedEnd()
