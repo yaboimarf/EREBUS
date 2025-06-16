@@ -109,7 +109,7 @@ MonoBehaviour:
   killNumber: 0
   killNumberRange: 100
   jammerRotate: {x: 0, y: 0, z: 0}
-  jammerRotateSpeed: 1
+  jammerRotateSpeed: 250
 --- !u!135 &3285175899668597887
 SphereCollider:
   m_ObjectHideFlags: 0
