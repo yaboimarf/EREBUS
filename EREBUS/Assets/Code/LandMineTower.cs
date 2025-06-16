@@ -8,6 +8,14 @@ public class LandMineTower : MonoBehaviour
     public GameObject currentTarget;
     public int killNumber;
     public int killNumberRange;
+    public Vector3 jammerRotate;
+    public float jammerRotateSpeed;
+
+    public void Update()
+    {
+        jammerRotate.y = jammerRotateSpeed * Time.deltaTime;
+        transform.Rotate(jammerRotate);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
