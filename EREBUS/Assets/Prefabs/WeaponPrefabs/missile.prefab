@@ -212,7 +212,7 @@ MonoBehaviour:
   projectileSpeed: 20
   direction: {x: 0, y: 0, z: 1}
   enemy: {fileID: 0}
-  damageToDo: 15
+  damageToDo: 5
   lifeTime: 5
   explosionRadius: 5
   explosion: {fileID: 7971109067178934375}
