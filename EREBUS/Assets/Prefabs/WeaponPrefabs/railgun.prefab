@@ -249,7 +249,7 @@ MonoBehaviour:
   reloadTime: 3
   timer: 0
   range: 100
-  damage: 500
+  damage: 20
   muzzleFlash: {fileID: 7008488968843435431}
 --- !u!1001 &8191124789641261514
 PrefabInstance:
