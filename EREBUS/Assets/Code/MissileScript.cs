@@ -6,16 +6,23 @@ public class MissileScript : MonoBehaviour
 {
     public float projectileSpeed;
     public Vector3 direction = Vector3.forward;
-    public Enemy enemy;
+    public GameObject enemy;
     public int damageToDo;
     public float lifeTime;
     public float explosionRadius;
     public ParticleSystem explosion;
     // Start is called before the first frame update
     void Start()
-    {
-        enemy = GameObject.FindWithTag("Enemy").GetComponent<Enemy>();
+    {        
         Destroy(gameObject, lifeTime);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other == GameObject.FindWithTag("Enemy").GetComponent<Collider>())
+        {
+            enemy = other.gameObject;
+        }
     }
 
     // Update is called once per frame
@@ -23,6 +30,7 @@ public class MissileScript : MonoBehaviour
     {
         if(enemy != null)
         {
+            gameObject.GetComponent<SphereCollider>().enabled = false;
             transform.LookAt(enemy.transform);
         }        
         transform.Translate(direction * projectileSpeed * Time.deltaTime);        
