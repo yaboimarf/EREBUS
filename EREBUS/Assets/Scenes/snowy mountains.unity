@@ -2786,6 +2786,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeLocation
       objectReference: {fileID: 0}
+    - target: {fileID: 7299563126949511141, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3347767681118304249, guid: ca3b8b1a622b73045af4f2cea2ab9dc8,
+        type: 3}
     - target: {fileID: 8406279079476462567, guid: a8efea66036cdf049ba95d1340d337a3,
         type: 3}
       propertyPath: towerCost
