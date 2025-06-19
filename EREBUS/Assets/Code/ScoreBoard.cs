@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Net.Security;
+using UnityEngine.SceneManagement;
 
 public class ScoreBoard : MonoBehaviour
 {
@@ -9,18 +11,18 @@ public class ScoreBoard : MonoBehaviour
     public int healthRemaining;
     public TMP_Text funds;
     public TMP_Text playerHealth;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject loseScreen;
+    public string sceneChange;
 
     // Update is called once per frame
     void Update()
     {
         funds.text = availableFunds.ToString();
         playerHealth.text = healthRemaining.ToString();
-
+        if(healthRemaining <= 0)
+        {
+            GameOverScreen();
+        }
     }
     public void AddFunds(int coins)
     {
@@ -29,5 +31,14 @@ public class ScoreBoard : MonoBehaviour
     public void RemoveHealth(int damage)
     {
         healthRemaining -= damage;
+    }
+    public void GameOverScreen()
+    {
+        Time.timeScale = 0;
+        loseScreen.SetActive(true);
+    }
+    public void GameOverScreenButton()
+    {
+        SceneManager.LoadScene(sceneChange);
     }
 }

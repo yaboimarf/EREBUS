@@ -11,6 +11,7 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
     public int currentWaveIndex = 0;
     private bool readyToCountDown;
+    public GameObject winScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class WaveSpawner : MonoBehaviour
         if(currentWaveIndex >= waves.Length)
         {
             Debug.Log("all clear");
+            WinScreen();
             return;
         }
         if(readyToCountDown == true)
@@ -55,6 +57,11 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
             }
         }        
+    }
+    public void WinScreen()
+    {
+        Time.timeScale = 0;
+        winScreen.SetActive(true);
     }
 }
 [System.Serializable]
