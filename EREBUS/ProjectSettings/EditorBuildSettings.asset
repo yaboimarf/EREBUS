@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/woestijn.unity
     guid: e5683c300bf4adb478bd9e27ea084501
+  - enabled: 1
+    path: Assets/Scenes/snowy mountains.unity
+    guid: bef71db9c5c08f54aa4bee4fd5346e71
   m_configObjects: {}
