@@ -18,6 +18,7 @@ public class Tower : MonoBehaviour
     public float reloadTime;
     public float timer;
     public ParticleSystem muzzleFlash;
+    public AudioSource shootSound;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -108,6 +109,7 @@ public class Tower : MonoBehaviour
     private void Fire()
     {
         muzzleFlash.Play();
+        shootSound.Play();
         Instantiate(bulletPrefab, bulletSpawnPoint.position , bulletSpawnPoint.rotation);        
     }
 }

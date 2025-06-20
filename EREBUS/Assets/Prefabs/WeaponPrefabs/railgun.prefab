@@ -255,6 +255,7 @@ MonoBehaviour:
   range: 100
   damage: 20
   muzzleFlash: {fileID: 7008488968843435431}
+  railgunShoot: {fileID: 3096371775588483127}
 --- !u!82 &3096371775588483127
 AudioSource:
   m_ObjectHideFlags: 0
@@ -266,7 +267,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 15a0c1db40ec7984badbf12101788af4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

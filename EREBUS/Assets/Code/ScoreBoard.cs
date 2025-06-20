@@ -13,7 +13,7 @@ public class ScoreBoard : MonoBehaviour
     public TMP_Text playerHealth;
     public GameObject loseScreen;
     public string sceneChange;
-
+    public AudioSource baseHit;
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +30,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void RemoveHealth(int damage)
     {
+        baseHit.Play();
         healthRemaining -= damage;
     }
     public void GameOverScreen()

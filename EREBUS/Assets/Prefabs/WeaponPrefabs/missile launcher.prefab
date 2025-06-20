@@ -355,6 +355,7 @@ MonoBehaviour:
   reloadTime: 2
   timer: 0
   muzzleFlash: {fileID: 5916319312400944579}
+  shootSound: {fileID: -646948218878136058}
 --- !u!135 &4230456548119662340
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -387,7 +388,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9e7fb18878f73db429980b9f2b1cf386, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

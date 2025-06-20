@@ -409,6 +409,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &30692791 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2387725533798110743, guid: a8efea66036cdf049ba95d1340d337a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1954722048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53056519
 GameObject:
   m_ObjectHideFlags: 0
@@ -7375,6 +7381,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 555861358950710285, guid: a8efea66036cdf049ba95d1340d337a3,
         type: 3}
+      propertyPath: baseHit
+      value: 
+      objectReference: {fileID: 30692791}
+    - target: {fileID: 555861358950710285, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
       propertyPath: loseScreen
       value: 
       objectReference: {fileID: 592882438}
@@ -7472,6 +7483,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 994370317}
+    - target: {fileID: 2387725533798110743, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387725533798110743, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2712897424471292530, guid: a8efea66036cdf049ba95d1340d337a3,
         type: 3}
       propertyPath: m_text
@@ -7795,6 +7816,16 @@ PrefabInstance:
     - target: {fileID: 7641347018129653488, guid: a8efea66036cdf049ba95d1340d337a3,
         type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840758763018882780, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840758763018882780, guid: a8efea66036cdf049ba95d1340d337a3,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8406279079476462567, guid: a8efea66036cdf049ba95d1340d337a3,
