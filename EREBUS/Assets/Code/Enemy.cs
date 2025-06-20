@@ -58,7 +58,8 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damageTaken)
     {
-        health -= damageTaken;        
+        health -= damageTaken;
+        deathExplosion.Play();
     }
     public void SpeedMultiplyerDecrease(float reduction)
     {
