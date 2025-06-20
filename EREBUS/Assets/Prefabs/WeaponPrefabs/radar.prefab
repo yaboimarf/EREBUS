@@ -104,10 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6009126e1c8a95543952395d160345cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 0.2
+  speedMultiplier: 0.3
   currentTarget: {fileID: 0}
   killNumber: 0
-  killNumberRange: 100
+  killNumberRange: 10
   jammerRotate: {x: 0, y: 0, z: 0}
   jammerRotateSpeed: 250
 --- !u!135 &3285175899668597887
